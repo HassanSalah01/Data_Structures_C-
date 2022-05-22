@@ -14,6 +14,9 @@ public:
     ~Linked_List();
     void push(int val);
     void printAllNode();
+    void insertFirst(int val);
+    void insertAfter(int numb ,int val);
+    int linkedListLength();
 
 
 private:
