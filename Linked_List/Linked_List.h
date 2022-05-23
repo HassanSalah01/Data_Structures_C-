@@ -16,7 +16,10 @@ public:
     void printAllNode();
     void insertFirst(int val);
     void insertAfter(int numb ,int val);
-    int linkedListLength();
+    int getLen();
+    void deleteFirst();
+    void deleteAfter();
+    void deleteEnd();
 
 
 private:

@@ -28,9 +28,14 @@ void Linked_List::insertFirst(int val){
         head = newNode;
     }
 }
+void Linked_List::deleteFirst(){
+    Node* temp = head ;
+    head = head->next;
+    delete temp;
+}
 
 void Linked_List::insertAfter(int numb , int val){
-    if(linkedListLength()>0 && linkedListLength() >= numb){
+    if(getLen()>0 && getLen() >= numb){
         Node* temp = head ;
         Node* newNode  = new Node;
         newNode->value = val ;
@@ -42,10 +47,15 @@ void Linked_List::insertAfter(int numb , int val){
         newNode->next = temp->next;
         temp->next = newNode;
     }
-
-
 }
-
+void Linked_List::deleteEnd(){
+    Node* temp = head;
+    while(temp->next->next!=NULL){
+        temp = temp->next;
+    }
+    delete temp->next;
+    temp->next = NULL;
+}
 
 void Linked_List::printAllNode(){
     Node* temp = head;
@@ -54,7 +64,7 @@ void Linked_List::printAllNode(){
         temp = temp->next;
     }
 }
-int Linked_List::linkedListLength(){
+int Linked_List::getLen(){
     Node* temp = head ;
     int len = 0 ;
     while(temp!=NULL){
