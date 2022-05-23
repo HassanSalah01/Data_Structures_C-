@@ -11,9 +11,12 @@ int main(){
     l1.push(1);
     l1.push(2);
     l1.push(3);
+    l1.push(4);
+    l1.push(5);
+    l1.push(6);
     l1.printAllNode();
-    l1.deleteEnd();
-    l1.deleteEnd();
+    l1.deleteExactNode(3);
+    l1.deleteExactNode(4);
     l1.printAllNode();
     
 

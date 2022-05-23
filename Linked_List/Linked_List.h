@@ -18,7 +18,7 @@ public:
     void insertAfter(int numb ,int val);
     int getLen();
     void deleteFirst();
-    void deleteAfter();
+    void deleteExactNode(int num);
     void deleteEnd();
 
 

@@ -4,7 +4,6 @@ using namespace std;
 
 Linked_List::Linked_List(){
     head = temp = NULL;
-
 }
 void Linked_List::push(int val){
     Node* newNode = new Node;
@@ -47,6 +46,21 @@ void Linked_List::insertAfter(int numb , int val){
         newNode->next = temp->next;
         temp->next = newNode;
     }
+}
+void Linked_List::deleteExactNode(int num){
+    if((getLen()>0 && getLen() >= num)){
+        Node* temp = head;
+        int s = num -2;
+        while(s > 0){
+            temp= temp->next;
+            s--;
+        }
+        Node* temp2 = temp->next;
+        temp->next = temp->next->next;
+        delete temp2;
+
+    }
+
 }
 void Linked_List::deleteEnd(){
     Node* temp = head;
