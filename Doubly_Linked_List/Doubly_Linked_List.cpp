@@ -47,6 +47,18 @@ void Doubly_Linked_List::insertFirst(int val){
 }
 
 void Doubly_Linked_List::insertAfter(int numb ,int val){
+    Node* newNode = new Node;
+    newNode->value = val;
+    Node* temp = head ;
+    int num = numb-1;
+    while(num>0){
+        temp = temp->next;
+        num--;
+    }
+    newNode->pre = temp;
+    newNode->next = temp->next;
+    temp->next = newNode;
+    
     
 }
 
