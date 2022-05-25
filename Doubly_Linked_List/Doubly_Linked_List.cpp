@@ -6,30 +6,6 @@ Doubly_Linked_List::Doubly_Linked_List()
 {
     head = temp = NULL;
 }
-void Doubly_Linked_List::push(int val){
-    Node* newNode = new Node ;
-    newNode->value = val;
-    newNode->next = NULL;
-    newNode->pre=NULL;
-    if(head==NULL){
-        head = temp = newNode;
-    }else{
-        previous = temp;
-        newNode->pre= previous;
-        temp->next = newNode;
-        temp = newNode;
-    }
-}
-void Doubly_Linked_List::printAllNode(){
-    Node* temp = head;
-    while(temp!=NULL){
-        cout << temp->pre <<endl;
-        cout << temp->value <<endl;
-        cout << temp->next <<endl;
-        cout << "____________________________"<<endl;
-        temp = temp->next;
-    }
-}
 void Doubly_Linked_List::insertFirst(int val){
     if(head ==NULL){
         push(val);
@@ -57,15 +33,29 @@ void Doubly_Linked_List::insertAfter(int numb ,int val){
     temp->next = newNode;
     
 }
-void Doubly_Linked_List::deleteEnd(){
-    Node* temp = head;
-    while(temp->next->next!=NULL){
-        temp = temp->next;
+void Doubly_Linked_List::push(int val){
+    Node* newNode = new Node ;
+    newNode->value = val;
+    newNode->next = NULL;
+    newNode->pre=NULL;
+    if(head==NULL){
+        head = temp = newNode;
+    }else{
+        previous = temp;
+        newNode->pre= previous;
+        temp->next = newNode;
+        temp = newNode;
     }
-    delete temp->next;
-    temp->next = NULL;
-
 }
+
+
+
+void Doubly_Linked_List::deleteFirst(){
+    head=head->next;
+    delete head->pre;
+    head->pre = NULL;
+}
+
 
 void Doubly_Linked_List::deleteExactNode(int num){
     if(num==1){
@@ -86,6 +76,15 @@ void Doubly_Linked_List::deleteExactNode(int num){
         temp->next = temp2;
         }
     }
+void Doubly_Linked_List::deleteEnd(){
+    Node* temp = head;
+    while(temp->next->next!=NULL){
+        temp = temp->next;
+    }
+    delete temp->next;
+    temp->next = NULL;
+
+}
 
 
 int Doubly_Linked_List::getLen(){
@@ -97,6 +96,16 @@ int Doubly_Linked_List::getLen(){
     }
     return count;
 
+}
+void Doubly_Linked_List::printAllNode(){
+    Node* temp = head;
+    while(temp!=NULL){
+        cout << temp->pre <<endl;
+        cout << temp->value <<endl;
+        cout << temp->next <<endl;
+        cout << "____________________________"<<endl;
+        temp = temp->next;
+    }
 }
 Doubly_Linked_List::~Doubly_Linked_List()
 {

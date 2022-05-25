@@ -13,7 +13,7 @@ int main(){
    d1.push(4);
    d1.push(5);
    d1.push(6);
-   d1.deleteExactNode(3);
+   d1.deleteFirst();
    d1.printAllNode();
    
 
