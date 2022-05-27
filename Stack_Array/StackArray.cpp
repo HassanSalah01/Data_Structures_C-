@@ -7,8 +7,9 @@ StackArray::StackArray(int num)
     numb = num;
 }
 
+//push a number into The top of the stack
 void StackArray::push(int val){
-    // cout << numb << " " << getLen() <<endl;
+   
     if(numb<=getLen()){
         cout << "sorry Stack Is Full" <<endl;
     }else{
@@ -17,14 +18,17 @@ void StackArray::push(int val){
     }
 }
 
+//remove a number From Top of the stack
 void StackArray::pop(){
     top--;
 }
 
+//return The top element of the stack
 int StackArray::peek(){
     return stk[top];
 }
 
+// return true if the stack is empty 
 bool StackArray::isEmpty(){
     if(top==-1){
         return true;
@@ -33,10 +37,12 @@ bool StackArray::isEmpty(){
     }
 }
 
+// return the length of the stack
 int StackArray::getLen(){
     return top+1;
 }
 
+// print All the elements in the stack
 void StackArray::printStk(){
     for (int i=top ; i >= 0;i--){
         cout << stk[i] <<endl;
