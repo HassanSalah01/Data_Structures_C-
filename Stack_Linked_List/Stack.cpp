@@ -1,4 +1,3 @@
-#include "Linked_List.h"
 #include "Stack.h"
 #include <iostream>
 using namespace std;
@@ -17,6 +16,17 @@ void Stack::push(int val){
         top=newNode;
     }
 }
+void Stack::pop(){
+    Node* temp = top;
+    top = top->next;
+    delete temp;
+}
+
+void Stack::printPeek(){
+    cout << top->value <<endl;
+}
+
+
 Stack::~Stack()
 {
 

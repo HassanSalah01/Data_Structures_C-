@@ -1,6 +1,6 @@
-#include "Linked_List.h"
 #ifndef STACK_H
 #define STACK_H
+
 
 
 #pragma once
@@ -16,12 +16,10 @@ public:
     ~Stack();
     void push(int val);
     void printAllNode();
-    void insertFirst(int val);
-    void insertAfter(int numb ,int val);
+    void pop();
     int getLen();
-    void deleteFirst();
-    void deleteExactNode(int num);
-    void deleteEnd();
+    void printPeek();
+
 
 
 private:

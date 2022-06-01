@@ -1,6 +1,4 @@
 #include <iostream>
-#include "Linked_List.h"
-#include "Linked_List.cpp"
 #include "Stack.h"
 #include "Stack.cpp"
 using namespace std;
@@ -9,6 +7,12 @@ int main(){
 
 
     Stack s1;
+    s1.push(5);
+    s1.push(4);
+    s1.push(1);
+    s1.printPeek();
+    s1.pop();
+    s1.printPeek();
 
     return 0;
 }
