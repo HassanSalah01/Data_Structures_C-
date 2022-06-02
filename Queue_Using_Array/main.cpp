@@ -15,6 +15,9 @@ int main(int argc, char const *argv[])
     q1.print();
     q1.deQueue();
     q1.print();
+    cout << q1.getFront() <<endl;
+    cout << q1.getRear() <<endl;
+    cout << q1.getLength() <<endl;
     
 
 

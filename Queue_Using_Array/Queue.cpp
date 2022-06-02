@@ -25,6 +25,15 @@ void Queue::print(){
         cout <<que[i]<<endl;
     }
 }
+int Queue::getFront(){
+    return que[front];
+}
+int Queue::getLength(){
+    return (rear+1)-front;
+}
+int Queue::getRear(){
+    return que[rear];
+}
 
 Queue::~Queue()
 {

@@ -9,6 +9,9 @@ public:
     Queue(int number);
     void enQueue(int val);
     void deQueue();
+    int getFront();
+    int getRear();
+    int getLength();
     void print();
     ~Queue();
 
