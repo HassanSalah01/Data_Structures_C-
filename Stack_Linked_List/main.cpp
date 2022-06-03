@@ -9,10 +9,8 @@ int main(){
     Stack s1;
     s1.push(5);
     s1.push(4);
-    s1.push(1);
-    s1.printPeek();
-    s1.pop();
-    s1.printPeek();
+    s1.printAllNode();
+    cout << s1.getLen() <<endl;
 
     return 0;
 }
