@@ -20,6 +20,30 @@ void Queue::enqueue(int val){
         rear = newNode;
     }
 }
+
+void Queue::deQueue(){
+    Node* temp = front;
+    front = front->next;
+    delete temp;
+}
+
+int Queue::getFront(){
+    return front->value;
+}
+
+int Queue::getRear(){
+    return rear->value;
+}
+
+int Queue::getLength(){
+    Node* temp = front;
+    int count = 0 ;
+    while(temp!=0){
+        count++;
+        temp = temp->next;
+    }
+    return count;
+}
 void Queue::print(){
     Node* temp = front;
     while(temp!=NULL){

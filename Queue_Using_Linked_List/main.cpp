@@ -14,6 +14,11 @@ int main(int argc, char const *argv[])
     q1.enqueue(7);
     q1.enqueue(8);
     q1.print();
+    q1.deQueue();
+    q1.print();
+    cout << q1.getFront()<<" front"<<endl;
+    cout << q1.getRear()<<" front1"<<endl;
+    cout << q1.getLength()<<" front2"<<endl;
 
     return 0;
 }
